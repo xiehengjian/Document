@@ -1,6 +1,6 @@
 module.exports = {
   "title": "白开水",
-  "description": "Enjoy when you can, and endure when you must.",
+  "description": "The harder you work, the more you love, the luckier you are",
   "dest": "public",
   "base":".",
   "head": [
@@ -95,14 +95,14 @@ module.exports = {
     // },
     "type": "blog",
     "blogConfig": {
-      "category": {
-        "location": 2,
-        "text": "others"
-      },
-      "tag": {
-        "location": 3,
-        "text": "Tag"
-      }
+      // "category": {
+      //   "location": 2,
+      //   "text": "others"
+      // },
+      // "tag": {
+      //   "location": 3,
+      //   "text": "Tag"
+      // }
     },
     "friendLink": [
       // {

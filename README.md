@@ -1,8 +1,8 @@
 ---
 home: true
-heroText: vuepress-theme-reco
-tagline: A simple and beautiful vuepress blog theme.
-# heroImage: /hero.png
+heroText: 白开水
+tagline: 越努力，越热爱，越幸运
+heroImage: /hero.png
 # heroImageStyle: {
 #   maxWidth: '600px',
 #   width: '100%',
