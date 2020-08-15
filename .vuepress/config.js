@@ -2,7 +2,7 @@ module.exports = {
   "title": "白开水",
   "description": "The harder you work, the more you love, the luckier you are",
   "dest": "public",
-  "base":".",
+  //"base":".",
   "head": [
     [
       "link",
