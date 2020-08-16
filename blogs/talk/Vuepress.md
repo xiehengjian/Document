@@ -53,3 +53,18 @@ want to download reco_luan's '午后南杂') (Use arrow keys)
   afternoon-grocery 
 ```
 
+接下来进入您的工程目录，启动您的项目吧
+
+```shell
+# 接入项目目录
+cd my-blog  #my-blog替换为之前您填入的项目名称
+
+# 安装npm
+npm install
+
+# 运行测试环境
+npm run dev
+```
+
+访问命令行输出的ip地址，一般为`http://localhost:8080`,即可访问您的博客了！
+
