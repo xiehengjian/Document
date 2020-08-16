@@ -1,7 +1,7 @@
 ---
-title: 如何征服Git
+title: 一小时征服Git
 date: 2020-08-16
-sidebar:'auto'
+sidebar: 'auto'
 categories:
  - 工具
 tags:
@@ -9,9 +9,10 @@ tags:
 publish: true
 ---
 
-::: tip
+::: tip 
 极客时间一小时征服Git直播笔记
 :::
+
 <!-- more -->
 
 ## 四个为什么
