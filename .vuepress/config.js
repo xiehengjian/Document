@@ -22,6 +22,10 @@ module.exports = {
   "theme": "reco",
   "themeConfig": {
     sidebarDepth:4,
+    valineConfig: {
+      appId: '4Tv2B62rQDPdsIv1aAsQhKy2-gzGzoHsz',// your appId
+      appKey: 'TDydDfhh0qfNOQ6QFA21jvNG', // your appKey
+    },
     "nav": [
       {
         "text": "首页",
