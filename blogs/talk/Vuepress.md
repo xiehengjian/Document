@@ -106,3 +106,53 @@ npm run dev
 └─ README.md #这里存放着博客首页的内容
 ```
 
+#### 配置启动页
+
+> 启动页展示的内容为博客标题与描述，即您在创建工程时输入的内容
+
+您可以在`.vuepress/config.js`下找到如下内容，通过修改对应的字符来改变您的启动页
+
+```js
+// .vuepress/config.js
+module.exports = {
+  "title": "test", 
+  "description": "test",
+  }
+```
+
+#### 配置首页
+
+> 首页即为启动页之后的主页面
+
+首页的内容由项目根目录下的`README.md` 配置生成，您可以通过更改其中的配置项来变更您的首页
+
+```yaml
+---
+home: true  #指定该文件为您的首页，改为false则不作为首页
+heroText: vuepress-theme-reco  #首页居中显示的文本
+tagline: A simple and beautiful vuepress blog theme. # 首页显示的标语
+# heroImage: /hero.png  #首页显示的主图，默认被注释，取消注释可显示图片
+# heroImageStyle: {  # 首页主图的样式控制，默认被注释
+#   maxWidth: '600px',
+#   width: '100%',
+#   display: block,
+#   margin: '9rem auto 2rem',
+#   background: '#fff',
+#   borderRadius: '1rem',
+# }
+bgImageStyle: { #背景图片样式
+  height: '450px'
+}
+isShowTitleInHome: false 
+actionText: Guide
+actionLink: /views/other/guide
+features:
+- title: Yesterday
+  details: 开发一款看着开心、写着顺手的 vuepress 博客主题
+- title: Today
+  details: 希望帮助更多的人花更多的时间在内容创作上，而不是博客搭建上
+- title: Tomorrow
+  details: 希望更多的爱好者能够参与进来，帮助这个主题更好的成长
+---
+```
+
