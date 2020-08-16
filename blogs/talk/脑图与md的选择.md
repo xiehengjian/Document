@@ -1,6 +1,10 @@
 ---
 title: 演示摘要
 date: 2020-08-15
+categories:
+ - 测试
+tags:
+ - 测试
 sidebar: 'auto'
 publish: true
 ---
