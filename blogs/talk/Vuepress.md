@@ -158,3 +158,33 @@ features:
 ---
 ```
 
+到此为主，您会注意到首页内容远不止这些，例如个人资料卡、文章列表，这些如何更改呢？
+
+* 文章列表是根据您的文章自动生成的，一旦您发布的文章中的含有`Front Matter`，系统会自动将其收集至首页，默认按时间顺序展示
+
+* 个人资料卡的头像和昵称您可以按上述说明自由更改，`Category`和`Tag`项则跟您的文章中标注的分类和标签自动生成
+
+* `Friend Link` 则是您可以自由更改的，它的配置在`.vuepress/config.js`中，您可以找到如下内容，并对应进行修改配置
+
+  ```js
+      "friendLink": [
+        {//每一个{}中为一个友链
+          "title": "午后南杂", //友联标题
+          "desc": "Enjoy when you can, and endure when you must.", //友链描述
+          "email": "1156743527@qq.com",  //友链邮箱
+          "link": "https://www.recoluan.com" //友链地址
+        },
+        {
+          "title": "vuepress-theme-reco",
+          "desc": "A simple and beautiful vuepress Blog & Doc theme.",
+          "avatar": "https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png",
+          "link": "https://vuepress-theme-reco.recoluan.com"
+        }
+      ],
+  ```
+
+  
+
+  
+
+  
