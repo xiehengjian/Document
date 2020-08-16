@@ -81,7 +81,27 @@ module.exports = {
             "text": "GitHub",
             "link": "https://github.com/xiehengjian",
             "icon": "reco-github"
-          }
+          },
+          {
+            "text": "CSDN",
+            "link": "https://blog.csdn.net/qq_19978927",
+            "icon": "reco-csdn"
+          },
+          {
+            "text": "知乎",
+            "link": "https://www.zhihu.com/people/bai-kai-shui-68-33/posts",
+            "icon": "reco-zhihu"
+          },
+          {
+            "text": "简书",
+            "link": "https://www.jianshu.com/u/8238d75b6623",
+            "icon": "reco-jianshu"
+          },
+          // {
+          //   "text": "微信",
+          //   "link": "https://www.jianshu.com/u/8238d75b6623",
+          //   "icon": "reco-wechat"
+          // },
         ]
       }
     ],
