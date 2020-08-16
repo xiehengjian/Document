@@ -66,7 +66,7 @@ npm install
 npm run dev
 ```
 
-访问命令行输出的ip地址，一般为`http://localhost:8080`,即可访问您的博客了！
+访问命令行输出的ip地址，一般为`http://localhost:8080`(若端口被占用则依次递增，以终端输出为准)，即可访问您的博客了！
 
 ![image-20200816143942667](https://bbs-upload.marginnote.cn/original/2X/6/6d7702cdd01116cdadfbffdf52bcae76590ceb8b.png)
 
@@ -193,6 +193,16 @@ features:
   ```
 
   #### 配置底部
+
+  底边栏展示了如`主题`、`备案信息`、`版权`、`年份`等信息，这些内容仍需要您前往`.vuepress/config.js`进行修改
+
+  ```js
+      "author": "me", //版权信息，与昵称为同一数据
+  		"record": "xxxx", //备案信息
+      "startYear": "2017" //开始年份
+  ```
+
+  #### 配置导航栏
 
   
 
