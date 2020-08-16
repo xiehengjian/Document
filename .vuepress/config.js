@@ -21,6 +21,7 @@ module.exports = {
   ],
   "theme": "reco",
   "themeConfig": {
+    sidebarDepth:4,
     "nav": [
       {
         "text": "首页",
