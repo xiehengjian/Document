@@ -178,10 +178,10 @@ features:
   ```js
       "friendLink": [
         {//每一个{}中为一个友链
-          "title": "午后南杂", //友联标题
-          "desc": "Enjoy when you can, and endure when you must.", //友链描述
-          "email": "1156743527@qq.com",  //友链邮箱
-          "link": "https://www.recoluan.com" //友链地址
+          "title": "白开水", //友联标题
+          "desc": "越努力，越热爱，越幸运",  //友链描述
+          "email": "846188037@qq.com",   //友链邮箱
+          "link": "https://www.hjxie.icu" //友链地址
         },
         {
           "title": "vuepress-theme-reco",
@@ -203,6 +203,69 @@ features:
   ```
 
   #### 配置导航栏
+
+  ##### logo
+
+  您需要前往`.vuepress/config.js`找到如下内容，修改您的logo图片，该图片存储在`.vuepress/public`中
+
+  ```js
+      "logo": "/logo.png",
+  ```
+
+  ##### 搜索
+
+  您需要前往`.vuepress/config.js`找到如下内容，修改搜索相关配置
+
+  ```js
+      "search": true,  //是否开启搜索
+      "searchMaxSuggestions": 10,  //最多的搜索建议条目
+  ```
+
+  ##### 导航
+
+  您需要前往`.vuepress/config.js`找到如下内容，修改导航相关配置
+
+  其中：
+
+  * 导航文本为导航按钮所展示的文字信息
+  * 路由地址即为跳转路径，根目录`/`对应您项目的根目录，例如
+  * 图标则为导航文本左边显示的图标，可以在[reco图标库]([https://vuepress-theme-reco.recoluan.com/views/1.x/configJs.html#%E5%9B%BE%E6%A0%87](https://vuepress-theme-reco.recoluan.com/views/1.x/configJs.html#图标))中寻找您需要的图标，也可以不要图标
+
+  ```js
+      "nav": [  //如下代码中，每个{...}即为一个导航块
+        {
+          "text": "Home",       //导航文本
+          "link": "/",          //路由地址
+          "icon": "reco-home"   //图标
+        },
+        {
+          "text": "TimeLine",
+          "link": "/timeline/",
+          "icon": "reco-date"
+        },
+        {
+          "text": "Docs",
+          "icon": "reco-message",
+          "items": [
+            {
+              "text": "vuepress-reco",
+              "link": "/docs/theme-reco/"
+            }
+          ]
+        },
+        {
+          "text": "Contact",
+          "icon": "reco-message",
+          "items": [
+            {
+              "text": "GitHub",
+              "link": "https://github.com/recoluan",
+              "icon": "reco-github"
+            }
+          ]
+        }
+      ],
+  ```
 
   
 
