@@ -1,5 +1,22 @@
-# uiautomator2
+---
+title: uiautomator2
+date: 2020-08-16
+sidebar: 'auto'
+categories:
+ - 软件测试
+tags:
+ - uiautomator
+ - python
+publish: true
+---
 
+
+
+::: tip 
+uiautomator2是python封装的用于安卓自动化测试的库，其中对于界面元素的定位尤为简洁 
+:::
+
+<!-- more -->
 ## 环境搭建
 
 ### 安装Python
@@ -237,4 +254,178 @@ device.app_uninstall(package)
 
 
 ### 元素
+
+#### 定位元素
+
+##### 元素特征
+
+###### text定位
+
+```python
+# 通过控件文本匹配
+# 参数：
+# 	text:控件文本
+device(text=None)
+
+# 通过控件文本包含
+# 参数：
+# 	textContains:控件文本包含内容
+device(textContains=None)
+
+# 通过控件文本正则匹配
+# 参数：
+# 	textMatches:控件文本匹配正则表达式
+device(textMatches=None)
+
+# 通过控件文本前缀匹配
+# 参数：
+# 	textStartWith:控件文本前缀
+device(textStartWith=None)
+```
+
+###### class定位
+
+```python
+# 通过控件类别匹配
+# 参数：
+# 	className:控件文本
+device(className=None)
+
+# 通过控件类别正则匹配
+# 参数：
+# 	classNameMatches:控件类别匹配正则表达式
+device(classNameMatches=None)
+```
+
+###### description定位
+
+```python
+# 通过控件描述匹配
+# 参数：
+# 	description:控件描述
+device(description=None)
+
+# 通过控件描述包含
+# 参数：
+# 	descriptionContains:控件描述包含内容
+device(descriptionContains=None)
+
+# 通过控件描述正则匹配
+# 参数：
+# 	descriptionMatches:控件描述匹配正则表达式
+device(descriptionMatches=None)
+
+# 通过控件描述前缀匹配
+# 参数：
+# 	descriptionStartWith:控件描述前缀
+device(descriptionStartWith=None)
+```
+
+###### resourceId定位
+
+```python
+# 通过控件ID匹配
+# 参数：
+# 	resourceId:控件ID
+device(resourceId=None)
+
+# 通过控件ID正则匹配
+# 参数：
+# 	resourceIdMatches:控件ID匹配正则表达式
+device(resourceIdMatches=None)
+```
+
+###### packageName定位
+
+```python
+# 通过控件包名匹配
+# 参数：
+# 	resourceId:控件ID
+device(packageName=None)
+
+# 通过控件包名正则匹配
+# 参数：
+# 	resourceIdMatches:控件ID匹配正则表达式
+device(packageNameMatches=None)
+```
+
+###### 其他
+
+* `checkable`   `checked`    `clickable`    `longClickable`
+* `scrollable`  `enabled`  `focusable`  `selected`
+* `index`   `instance`
+
+##### 层级关系
+
+###### 子元素
+
+```python
+# 定位到父元素后定位其子元素
+# 参数：
+# 	para:为元素特征参数
+element.child(para)
+```
+
+###### 同级元素
+
+```python
+# 定位到元素后定位其同级元素
+# 参数：
+# 	para:为元素特征参数
+element.sibling(para)
+```
+
+###### 父元素
+
+```python
+
+```
+
+##### 页面位置
+
+> 由于该方法需要读取并分析页面上的相对位置，故速度较慢
+
+###### 上方
+
+```python
+# 定位到元素后定位其上方元素
+# 参数：
+# 	para:为元素特征参数
+element.up(para)
+```
+
+
+
+###### 下方
+
+```python
+# 定位到元素后定位其下方元素
+# 参数：
+# 	para:为元素特征参数
+element.down(para)
+```
+
+
+
+###### 左边
+
+````python
+# 定位到元素后定位其左边元素
+# 参数：
+# 	para:为元素特征参数
+element.left(para)
+````
+
+
+
+###### 右边
+
+```python
+# 定位到元素后定位其右边元素
+# 参数：
+# 	para:为元素特征参数
+element.right(para)
+```
+
+#### 元素操作
 

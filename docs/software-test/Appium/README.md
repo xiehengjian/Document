@@ -1,4 +1,20 @@
-# Appium
+---
+title: Appium
+date: 2020-08-15
+sidebar: 'auto'
+categories:
+ - 软件测试
+tags:
+ - Appium
+ - python
+publish: true
+---
+
+::: tip 
+使用Python作为脚本语言，利用Appium框架对安卓App进行测试化测试
+:::
+
+<!-- more -->
 
 ## 环境搭建
 
