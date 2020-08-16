@@ -143,6 +143,8 @@ tagline: A simple and beautiful vuepress blog theme. # 首页显示的标语
 bgImageStyle: { #背景图片样式
   height: '450px'
 }
+
+# 以下内容基本上不生效，可以不用关心
 isShowTitleInHome: false 
 actionText: Guide
 actionLink: /views/other/guide
