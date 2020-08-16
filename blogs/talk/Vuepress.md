@@ -68,3 +68,41 @@ npm run dev
 
 访问命令行输出的ip地址，一般为`http://localhost:8080`,即可访问您的博客了！
 
+![image-20200816143942667](/Users/creative/Documents/document/blogs/talk/image/image-20200816143942667.png)
+
+### 博客配置
+
+#### 工程结构
+
+```shell
+├─ node_modules #存放着项目所需的依赖，我们不需要关心
+├─ docs
+│  └─ theme-reco
+│     ├─ api.md
+│     ├─ plugin.md
+│     ├─ theme.md
+│     └─ README.md
+├─ blogs
+│     ├─ category1
+│     │  ├─ 2018
+│     │  │  └─ 121501.md
+│     │  └─ 2019
+│     │     └─ 092101.md
+│     ├─ category2
+│     │  ├─ 2016
+│     │  │  └─ 121501.md
+│     │  └─ 2017
+│     │     └─ 092101.md
+│     └─ other
+│        └─ guide.md
+├─ .vuepress
+│ 	├─ config.js
+│   └─ public
+│     ├─ hero.png
+│     ├─ logo.png
+│     ├─ favicon.ico
+│     └─ avatar.png
+├─ package.json
+└─ README.md
+```
+
