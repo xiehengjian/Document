@@ -68,7 +68,7 @@ npm run dev
 
 访问命令行输出的ip地址，一般为`http://localhost:8080`,即可访问您的博客了！
 
-![image-20200816143942667](/Users/creative/Documents/document/blogs/talk/image/image-20200816143942667.png)
+![image-20200816143942667](https://bbs-upload.marginnote.cn/original/2X/6/6d7702cdd01116cdadfbffdf52bcae76590ceb8b.png)
 
 ### 博客配置
 
@@ -76,13 +76,13 @@ npm run dev
 
 ```shell
 ├─ node_modules #存放着项目所需的依赖，我们不需要关心
-├─ docs
+├─ docs  #该目录下存放您编写的文档
 │  └─ theme-reco
 │     ├─ api.md
 │     ├─ plugin.md
 │     ├─ theme.md
 │     └─ README.md
-├─ blogs
+├─ blogs #该目录下存放您编写的博客文章
 │     ├─ category1
 │     │  ├─ 2018
 │     │  │  └─ 121501.md
@@ -95,14 +95,14 @@ npm run dev
 │     │     └─ 092101.md
 │     └─ other
 │        └─ guide.md
-├─ .vuepress
-│ 	├─ config.js
-│   └─ public
-│     ├─ hero.png
-│     ├─ logo.png
-│     ├─ favicon.ico
-│     └─ avatar.png
-├─ package.json
-└─ README.md
+├─ .vuepress # 该目录下存放项目配置文件与静态资源
+│ 	├─ config.js #该文件用于配置项目
+│   └─ public # 该目录下存放网页中所需的静态资源
+│     ├─ hero.png # 首页大图
+│     ├─ logo.png # 站点logo
+│     ├─ favicon.ico #站点图标
+│     └─ avatar.png #头像
+├─ package.json #依赖管理文件
+└─ README.md #这里存放着博客首页的内容
 ```
 
