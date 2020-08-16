@@ -352,11 +352,18 @@ features:
 
 ```markdown
 ---
-title: 演示摘要
+title: Vuepress使用指南(reco)
+date: 2020-08-16
+sidebar: 'auto'
+categories:
+ - 工具
+tags:
+ - vue
+publish: true
 ---
 
 ::: tip 
-这里是摘要
+Vuepress是Vue作者尤雨溪开发的文档工具，本文采用Vuepress的reco主题进行相关配置说明
 :::
 
 <!-- more -->
@@ -365,4 +372,6 @@ title: 演示摘要
  
 ```
 
-![image-20200816165807927](/Users/creative/Documents/document/blogs/talk/image/3c21d569459d52310a217184224dc99969345fac.png)
+> 效果
+
+![image-20200816170602671](https://bbs-upload.marginnote.cn/original/2X/d/dac075bdb993bafd75f331693ba6357a5038c620.png)
