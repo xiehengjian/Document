@@ -9,7 +9,11 @@ tags:
 publish: true
 ---
 
+::: tip 
+Vuepress是Vue作者尤雨溪开发的文档工具，本文采用Vuepress的reco主题进行相关配置说明
+:::
 
+<!-- more -->
 
 ## 环境搭建
 
@@ -361,3 +365,4 @@ title: 演示摘要
  
 ```
 
+![image-20200816165807927](/Users/creative/Documents/document/blogs/talk/image/3c21d569459d52310a217184224dc99969345fac.png)
