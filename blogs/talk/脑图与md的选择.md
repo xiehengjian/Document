@@ -1,6 +1,20 @@
 ---
-publish:true
+title: 杂谈
+date: 2020-08-15
+sidebar: 'auto'
+categories:
+ - 软件测试
+tags:
+ - Appium
+ - python
+publish: true
 ---
+
+::: tip 
+使用Python作为脚本语言，利用Appium框架对安卓App进行测试化测试
+:::
+
+<!-- more -->
 
 脑图呢适合我看书的时候，随手总结，理清思维，他的优点是视觉上直观。
 
