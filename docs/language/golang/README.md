@@ -1,18 +1,15 @@
 ---
-title: Golang
-date: 2020-8-10
-categories:
- - 编程语言
-tags:
- - Golang
+title: 演示摘要
 ---
 
-
-::: tip
-本文记录学习Golang的内容
+::: tip 
+这里是摘要
 :::
 
 <!-- more -->
+
+### markdown正文
+ 
 ## Golang发展历史
 
 1. 诞生历史

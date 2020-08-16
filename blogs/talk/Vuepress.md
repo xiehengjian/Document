@@ -70,9 +70,9 @@ npm run dev
 
 ![image-20200816143942667](https://bbs-upload.marginnote.cn/original/2X/6/6d7702cdd01116cdadfbffdf52bcae76590ceb8b.png)
 
-### 博客配置
+## 博客配置
 
-#### 工程结构
+### 工程结构
 
 ```shell
 ├─ node_modules #存放着项目所需的依赖，我们不需要关心
@@ -106,7 +106,7 @@ npm run dev
 └─ README.md #这里存放着博客首页的内容
 ```
 
-#### 配置启动页
+### 配置启动页
 
 > 启动页展示的内容为博客标题与描述，即您在创建工程时输入的内容
 
@@ -120,7 +120,7 @@ module.exports = {
   }
 ```
 
-#### 配置首页
+### 配置首页
 
 > 首页即为启动页之后的主页面
 
@@ -192,7 +192,7 @@ features:
       ],
   ```
 
-  #### 配置底部
+  ### 配置底部
 
   底边栏展示了如`主题`、`备案信息`、`版权`、`年份`等信息，这些内容仍需要您前往`.vuepress/config.js`进行修改
 
@@ -202,9 +202,9 @@ features:
       "startYear": "2017" //开始年份
   ```
 
-  #### 配置导航栏
+  ### 配置导航栏
 
-  ##### logo
+  #### logo
 
   您需要前往`.vuepress/config.js`找到如下内容，修改您的logo图片，该图片存储在`.vuepress/public`中
 
@@ -212,7 +212,7 @@ features:
       "logo": "/logo.png",
   ```
 
-  ##### 搜索
+  #### 搜索
 
   您需要前往`.vuepress/config.js`找到如下内容，修改搜索相关配置
 
@@ -221,7 +221,7 @@ features:
       "searchMaxSuggestions": 10,  //最多的搜索建议条目
   ```
 
-  ##### 导航
+  #### 导航
 
   您需要前往`.vuepress/config.js`找到如下内容，修改导航相关配置
 
@@ -297,10 +297,67 @@ features:
         }
   ```
 
-  ### 文档写作
+  ## 文档写作
 
-  从
+  ### [Front Matter](https://vuepress-theme-reco.recoluan.com/views/1.x/frontMatter.html)
+
+  > 在markdown文档的顶部插入一段yaml配置代码
+
+  一个完整的 `Front Matter` 案例：
+
+  ```yaml
+  ---
+  title: 烤鸭的做法
+  date: 2019-08-08
+  sidebar: 'auto'
+  categories:
+   - 烹饪
+   - 爱好
+  tags:
+   - 烤
+   - 鸭子
+  keys:
+   - '123456'
+  publish: false
+  ---
+  ```
+
+  常用变量说明：
+
+  `title` :文章标题，放弃通过一级目录定义标题的方式，改在 `Front Matter` 中定义。
+
+  `date` :文章创建日期，格式 `2019-08-08` 或 `2019-08-08 08:08:08`。
+
+  `sidebar`:是否开启侧边栏。
+
+  `categories` :所属分类。
+
+  `tags` :所属标签。
+
+  `keys`: 所属标签。
+
+  `publish` :文章是否发布。
 
   
 
-  
+  另外还有一些`Vuepress` 默认主题的变量例如`prev`, `next`，请移步 [官方文档](https://vuepress.vuejs.org/zh/guide/frontmatter.html#其他格式的-front-matter)
+
+### [摘要](https://vuepress-theme-reco.recoluan.com/views/1.x/abstract.html)
+
+> 在markdown代码中，您将看到注释，注释前面的代码将显示在列表页面上的文章摘要中。
+
+```markdown
+---
+title: 演示摘要
+---
+
+::: tip 
+这里是摘要
+:::
+
+<!-- more -->
+
+### markdown正文
+ 
+```
+
