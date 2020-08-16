@@ -229,7 +229,7 @@ features:
 
   * 导航文本为导航按钮所展示的文字信息
   * 路由地址即为跳转路径，根目录`/`对应您项目的根目录，在项目打包时会将对应目录下的`README.md`文件生成为`index.html`，例如您想将链接指向您的`/docs/myDocument/README.md`,则将`link`内容改为``/docs/myDocument`,便可访问到您的文档。
-  * 图标则为导航文本左边显示的图标，可以在[reco图标库]([https://vuepress-theme-reco.recoluan.com/views/1.x/configJs.html#%E5%9B%BE%E6%A0%87](https://vuepress-theme-reco.recoluan.com/views/1.x/configJs.html#图标))中寻找您需要的图标，也可以不要图标
+  * 图标则为导航文本左边显示的图标，可以在[reco图标库](https://vuepress-theme-reco.recoluan.com/views/1.x/configJs.html#图标)中寻找您需要的图标，也可以不要图标
 
   ```js
       "nav": [  //如下代码中，每个{...}即为一个导航块
@@ -265,6 +265,36 @@ features:
           ]
         }
       ],
+  ```
+
+  或许您已经注意到，如果需要配置一个像`Docs`或者`Contact`这样的折叠的导航应该如何做呢？他们并不会直接跳转到对应的目标地址。
+
+  折叠导航的配置仍在之前所展示的导航配置代码中，现在将其单独提取出来进行分析。
+
+  
+
+  ```js
+   {
+          "text": "Docs",  //导航文本
+          "icon": "reco-message",  //导航图标
+          "items": [  //导航子模块
+            {
+              "text": "vuepress-reco",
+              "link": "/docs/theme-reco/"
+            }
+          ]
+        },
+        {
+          "text": "Contact",
+          "icon": "reco-message",
+          "items": [
+            {
+              "text": "GitHub",
+              "link": "https://github.com/recoluan",
+              "icon": "reco-github"
+            }
+          ]
+        }
   ```
 
   
