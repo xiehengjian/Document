@@ -1,11 +1,13 @@
 ---
 title: IOS真机调试(基于wda)
-date: 2020-08-16
+date: 2020-08-19
 sidebar: 'auto'
 categories:
- - 工具
+ - 软件测试
 tags:
- - vue
+ - iOS
+ - wda
+
 publish: true
 ---
 
