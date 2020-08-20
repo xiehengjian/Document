@@ -26,6 +26,12 @@ uiautomator2是python封装的用于安卓自动化测试的库，其中对于�
 
 ### 安装 uiautomator2
 
+```
+pip3 install uiautomator2
+```
+
+
+
 ### 安装weditor
 
 ```shell
