@@ -126,6 +126,16 @@ $ sudo apt-cache madison docker-ce
 $ sudo apt-get install docker-ce=17.11.0~0~ubuntu
 ```
 
+在国内使用Docker可能有存在网速问题，所以可以用阿里云镜像来解决
+
+```shell
+$ curl https://get.docker.com > getdocker.sh
+$ chmod a+x getdocker.sh
+$ ./getdocker.sh --mirror Aliyun
+$ echo '{"registry-mirrors": ["https://uxk0ognt.mirror.aliyuncs.com"]}' > /etc/docker/daemon.json
+$ systemctl restart docker.service
+```
+
 
 
 ## CentOS
