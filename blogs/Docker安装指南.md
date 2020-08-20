@@ -176,7 +176,7 @@ $ sudo systemctl start docker
 
 ## macOS
 
-Docker官方非常重视其在Mac环境下的易用性。由于大量开发者使用Mac环境进行开发,而 Docker是一个完整的容器化应用的开发环境,所以 Docker官方提供了简单易用的[Docker for Mac](htts:/docs.docke.com/docker-for-mac/)工具。Docker for Mac其实是一个完整的 Docker CE工具。下面我们一步步讲解如何正确安装 Docker for Mac。
+Docker官方非常重视其在Mac环境下的易用性。由于大量开发者使用Mac环境进行开发,而 Docker是一个完整的容器化应用的开发环境,所以 Docker官方提供了简单易用的[Docker for Mac](https:/docs.docke.com/docker-for-mac/)工具。Docker for Mac其实是一个完整的 Docker CE工具。下面我们一步步讲解如何正确安装 Docker for Mac。
 
 ### 选择版本
 
@@ -196,7 +196,7 @@ $ docker version -f '{{.Server.Experimental}}'
 
 ### 安装须知
 
-Docker for Mac与 Docker Machine的关系是互不影响。用户可以从本地 default machine 拷贝容器和镜像至 Docker for Mac的 Hyperkit VM中。 [Hyperkit](htps://github.com/moby/hyperkit)是 Docker开源的支持OSX 的轻量级虚拟化工具包。它基于 Macosx10.10之后引入的 Hypervisor框架。 Hyperkit应用可以利用硬件虚拟化运行VM,但无须特殊权限或者复杂的管理工具栈。
+Docker for Mac与 Docker Machine的关系是互不影响。用户可以从本地 default machine 拷贝容器和镜像至 Docker for Mac的 Hyperkit VM中。 [Hyperkit](https://github.com/moby/hyperkit)是 Docker开源的支持OSX 的轻量级虚拟化工具包。它基于 Macosx10.10之后引入的 Hypervisor框架。 Hyperkit应用可以利用硬件虚拟化运行VM,但无须特殊权限或者复杂的管理工具栈。
 
 当用户运行 Docker for Mac时,本机或远程均无须运行 Docker Machine。用户使用的是一套新的原生虚拟化系统,不再需要 Virtualbox。如果希望了解更多两者对比情况,参见https://docs.dockercom/docker-for-mac/docker-toolbox 
 
