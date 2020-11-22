@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "*.m": "matlab",
+        "*.html": "html",
+        "*.ttml": "xml",
+        "*.ttss": "css"
+    }
+}

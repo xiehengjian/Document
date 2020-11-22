@@ -40,13 +40,46 @@ CREATED      #镜像的创建时间
 SIZE         #镜像的大小
 
 #参数
--a, --all             #显示所有镜像（默认情况下隐藏中间镜像）    
-    --digests             #显示摘要
+-a, --all             #显示所有镜像（默认情况下隐藏临时镜像）    
+    --digests             #显示镜像的数字摘要值，默认为否
 -f, --filter filter   #根据提供的条件过滤输出
     --format string       #使用Go模板漂亮地打印图像
     --no-trunc            #不截断输出
 -q, --quiet           #只显示镜像ID
 ```
+
+### 添加标签
+
+```shell
+$ docker tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]
+
+# 相当于类似链接的作用
+```
+
+### 查看镜像信息
+
+```shell
+$ docker inspect [OPTIONS] NAME|ID [NAME|ID...]
+
+#参数
+-f, --format string   #指定输入格式
+-s, --size            #展示整个文件大小
+    --type string     #输出JSON
+```
+
+### 查看镜像历史
+
+```shell
+$ docker history [OPTIONS] IMAGE
+
+# 参数
+    --format string   Pretty-print images using a Go template
+-H, --human           Print sizes and dates in human readable format (default true)
+    --no-trunc        Don't truncate output
+-q, --quiet           Only show numeric IDs
+```
+
+
 
 ### 搜索镜像
 
@@ -73,8 +106,8 @@ AUTOMATED        #是否自动
 $ docker pull [OPTIONS] NAME[:TAG|@DIGEST]
 
 # 参数
--a, --all-tags                #下载存储库中的所有标记图像
-    --disable-content-trust   #跳过镜像验证（默认为true）
+-a, --all-tags                #是否获取仓库中的所有镜像，默认为否
+    --disable-content-trust   #取消镜像的内容校验，默认为真
     --platform string         #如果服务器支持多平台，则设置平台
 -q, --quiet                   #抑制详细输出
 ```
@@ -86,10 +119,87 @@ $ docker rmi [OPTIONS] IMAGE [IMAGE...]
 
 # 参数
 -f, --force      #强制删除镜像
-		--no-prune   #不要删除未标记的父项
+	--no-prune   #不要删除未标记的父项
 ```
 
+### 清理镜像
+
+```shell
+$ docker image prune
+# 参数
+-a,-all                  #删除所有无用镜像，不只是临时镜像
+-filter filter           #只清理符合给定过滤器的镜像
+-f,-force                #强制删除镜像
+
+```
+
+### 创建镜像
+
+#### 基于已有容器创建
+
+```shell
+$ docker commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]]
+# 参数
+  -a, --author string    #作者信息
+  -c, --change list      #提交的时候执行Dockerfile指令
+  -m, --message string   #提交消息
+  -p, --pause            #提交时暂停容器运行
+```
+
+#### 基于本地模板导入
+
+```shell
+$ docker import [OPTIONS] file|URL|- [REPOSITORY[:TAG]]
+#Options:
+  -c, --change list       Apply Dockerfile instruction to the created image
+  -m, --message string    Set commit message for imported image
+      --platform string   Set platform if server is multi-platform capable
+```
+
+#### 基于Dockerfile创建
+
+```shell
+$ docker build [OPTIONS] PATH | URL | -
+# 参数过多
+```
+
+### 保存镜像
+
+```shell
+$ docker save [OPTIONS] IMAGE [IMAGE...]
+#参数
+ -o, --output string   Write to a file, instead of STDOUT
+```
+
+### 载入镜像
+
+```shell
+$ docker load [OPTIONS]
+#参数
+  -i, --input string   Read from tar archive file, instead of STDIN
+  -q, --quiet          Suppress the load output
+```
+
+### 上传镜像
+
+```shell
+$ docker push [OPTIONS] NAME[:TAG]
+
+#参数
+ --disable-content-trust   Skip image signing (default true)
+```
+
+
+
 ## 容器命令
+
+### 创建容器
+
+```shell
+$ docker create [OPTIONS] IMAGE [COMMAND] [ARG...]
+```
+
+
 
 ### 创建并启动
 
@@ -119,6 +229,20 @@ $ docker ps [OPTIONS]
   -q, --quiet           #仅显示数字标识
   -s, --size            #显示总文件大小
 ```
+
+### 暂停容器
+
+```shell
+$ docker pause
+```
+
+### 恢复容器
+
+```shell
+$ docker unpause
+```
+
+
 
 ### 退出容器
 
@@ -214,6 +338,34 @@ $ docker cp [OPTIONS] SRC_PATH|- CONTAINER:DEST_PATH
  -a, --archive       #存档模式（复制所有uid/gid信息）
  -L, --follow-link   #始终遵循SRC_路径中的符号链接p'y
 ```
+
+### 导出容器
+
+```shell
+$ docker export
+```
+
+### 导入容器
+
+```shell
+$ docker import
+```
+
+## 数据管理
+
+### 创建数据卷
+
+```shell
+$ docker volume create -d local test
+```
+
+### 绑定数据卷
+
+```shell
+$ docker run -mount
+```
+
+### 数据卷容器
 
 
 

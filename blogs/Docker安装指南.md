@@ -240,5 +240,13 @@ $ docker version
 
 
 
+## Docker配置
+
+将当前用户加入docker用户组
+
+```shell
+$ sudo usermod -aG docker <user_name>
+```
+
 
 
