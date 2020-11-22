@@ -77,23 +77,104 @@ func (this *MinStack) GetMin() int {
 
 ### 由两个栈组成的队列
 
+> 编写一个类,用两个栈实现队列,支持队列的基本操作(add、poll、peek)
+
+[LeetCode](https://leetcode-cn.com/problems/yong-liang-ge-zhan-shi-xian-dui-lie-lcof/)
+
+```go
+type CQueue struct {
+    pushStack []int 
+    popStack []int
+}
+
+func Constructor() CQueue {
+    return CQueue{
+        pushStack:make([]int,0),
+        popStack:make([]int,0),
+    }
+}
+
+func (this *CQueue) AppendTail(value int)  {
+    this.pushStack=append(this.pushStack,value)
+}
+func (this *CQueue) DeleteHead() int {
+    if len(this.popStack)==0{
+        for len(this.pushStack)!=0{
+            this.popStack=append(this.popStack,this.pushStack[len(this.pushStack)-1])
+            this.pushStack=this.pushStack[:len(this.pushStack)-1]
+        }  
+    }
+    if len(this.popStack)==0{
+        return -1
+    }
+    res:=this.popStack[len(this.popStack)-1]
+    this.popStack=this.popStack[:len(this.popStack)-1]
+    return res
+}
+```
+
+
+
 ### 如何仅用递归函数和栈操作逆序一个栈
+
+> 一个栈依次压入1、2、3、4、5,那么从栈顶到栈底分别为5、4、3、2、1。将这个栈转置后,从栈顶到栈底为1、2、3、4、5,也就是实现栈中元素的逆序,但是只能用递归函数来实现,不能用其他数据结构。
+
+[nowcoder](https://www.nowcoder.com/questionTerminal/1de82c89cc0e43e9aa6ee8243f4dbefd)
 
 ### 猫狗队列
 
+[nowcoder](https://www.nowcoder.com/questionTerminal/8a7e04cff6a54b7095b94261d78108f5)
+
 ### 用一个栈实现另一个栈的排序
 
+[nowcoder](https://www.nowcoder.com/questionTerminal/ff8cba64e7894c5582deafa54cca8ff2)
+
+
+
+
 ### 用栈来求解汉诺塔问题
+> 汉诺塔问题比较经典,这里修改一下游戏规则:现在限制不能从最左侧的塔直接移动到最右侧,也不能从最右侧直接移动到最左侧,而是必须经过中间。求当塔有N层的时候, 打印最优移动过程和最优移动总步数
+
+[LeetCode](https://leetcode-cn.com/problems/hanota-lcci/)
 
 ### 生成窗口最大值数组
 
+> 给定一个数组 `nums` 和滑动窗口的大小 `k`，请找出所有滑动窗口里的最大值。
+
+例如：
+
+```txt
+输入: nums = [1,3,-1,-3,5,3,6,7], 和 k = 3
+输出: [3,3,5,5,6,7] 
+解释: 
+
+  滑动窗口的位置                最大值
+---------------               -----
+[1  3  -1] -3  5  3  6  7       3
+ 1 [3  -1  -3] 5  3  6  7       3
+ 1  3 [-1  -3  5] 3  6  7       5
+ 1  3  -1 [-3  5  3] 6  7       5
+ 1  3  -1  -3 [5  3  6] 7       6
+ 1  3  -1  -3  5 [3  6  7]      7
+```
+
+[LeetCode](https://leetcode-cn.com/problems/hua-dong-chuang-kou-de-zui-da-zhi-lcof/)
+
+
+
 ### 构造数组的 Max Tree
+
+[nowcoder](https://www.nowcoder.com/questionTerminal/a502c7c3c65e41fdaf65eec9e0654dcb)
 
 ### 求最大子矩阵的大小
 
+[nowcoder](https://www.nowcoder.com/questionTerminal/a5a0b05f0505406ca837a3a76a5419b3)
+
+
+
 ### 最大值減去最小值小于或等于num的子数组数量
 
-
+[newcoder](https://www.nowcoder.com/questionTerminal/fe79f97c890c448ca8c5f7e0fb8aba9dß)
 
 ## 第二章 链表问题
 
