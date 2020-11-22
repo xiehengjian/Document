@@ -1,5 +1,5 @@
 ---
-title: AjAX
+title: AjAX概述
 date: 2020-08-28
 sidebar: 'auto'
 categories:
