@@ -21,6 +21,18 @@ publish: true
 
 [LeetCode](https://leetcode-cn.com/problems/min-stack/)
 
+分析：
+
+实现一个结构体，其中包含两个栈，一个是正常栈，另一个是保存最小值的栈。
+
+出栈入栈时，正常栈均正常出入，我们重点关注最小栈。
+
+入栈时，如果入栈的值比当前最小值更小，则将其入最小栈
+
+出栈时，如果当前出栈的值是最小值，则最小栈也出栈。
+
+需要注意的是，当入栈的值等于当前最小值时，也需要将其入栈。否则，假设栈内最小值为x有两个，但min栈中只有一个x，当出栈一个x时，最小栈的唯一的x被出栈，而此时最小值仍是x。
+
 ```go
 type MinStack struct {
     stack []int
@@ -81,6 +93,16 @@ func (this *MinStack) GetMin() int {
 
 [LeetCode](https://leetcode-cn.com/problems/yong-liang-ge-zhan-shi-xian-dui-lie-lcof/)
 
+分析：
+
+利用栈的两次逆序变顺序来实现队列。
+
+构造一个出栈一个入栈，当压入队列的时候，就压入入栈。
+
+当出队列时，就从出栈里弹出元素
+
+需要注意的是，当出栈里没有元素时，就将入栈里所有元素都给压入出栈，当两栈均空时，则没有元素了。
+
 ```go
 type CQueue struct {
     pushStack []int 
@@ -121,9 +143,59 @@ func (this *CQueue) DeleteHead() int {
 
 [nowcoder](https://www.nowcoder.com/questionTerminal/1de82c89cc0e43e9aa6ee8243f4dbefd)
 
+```go
+package main
+
+import "fmt"
+
+func main(){
+	num:=0
+	fmt.Scanln(&num)
+	stack:=make([]int,num)
+
+	for i:=0;i<num;i++{
+		fmt.Scan(&stack[i])
+	}
+	reverse(&stack)
+	for _,v:=range stack{
+		fmt.Printf("%d ",v)
+	}
+
+
+}
+
+func getAndRemoveLastElement(stack *[]int)int{
+	result:=(*stack)[len(*stack)-1]
+	*stack=(*stack)[:len(*stack)-1]
+	if len(*stack)==0{
+		return result
+	}else{
+		last:=getAndRemoveLastElement(stack)
+		*stack=append(*stack,result)
+		return last
+	}
+	return result
+}
+
+func reverse(stack *[]int){
+	if len(*stack)==0{
+		return
+	}
+	i:=getAndRemoveLastElement(stack)
+	reverse(stack)
+	*stack=append(*stack,i)
+}
+```
+
 ### 猫狗队列
 
 [nowcoder](https://www.nowcoder.com/questionTerminal/8a7e04cff6a54b7095b94261d78108f5)
+
+```go
+
+```
+
+
 
 ### 用一个栈实现另一个栈的排序
 
