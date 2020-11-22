@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Docker常用命令 | 白开水</title>
+    <meta name="generator" content="VuePress 1.5.0">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="The harder you work, the more you love, the luckier you are">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <link rel="preload" href="/assets/css/0.styles.211ca6d9.css" as="style"><link rel="preload" href="/assets/js/app.1cf578a9.js" as="script"><link rel="preload" href="/assets/js/3.81915612.js" as="script"><link rel="preload" href="/assets/js/1.d78e6eed.js" as="script"><link rel="preload" href="/assets/js/20.641b26be.js" as="script"><link rel="prefetch" href="/assets/js/10.4e90d7c0.js"><link rel="prefetch" href="/assets/js/11.19efb2df.js"><link rel="prefetch" href="/assets/js/12.6526bf90.js"><link rel="prefetch" href="/assets/js/13.236fc95c.js"><link rel="prefetch" href="/assets/js/14.d8d0a2de.js"><link rel="prefetch" href="/assets/js/15.050478be.js"><link rel="prefetch" href="/assets/js/16.56f4e176.js"><link rel="prefetch" href="/assets/js/17.f973d665.js"><link rel="prefetch" href="/assets/js/18.d587d1b8.js"><link rel="prefetch" href="/assets/js/19.7b96f08c.js"><link rel="prefetch" href="/assets/js/21.5a4ddc45.js"><link rel="prefetch" href="/assets/js/22.d0ffcb2a.js"><link rel="prefetch" href="/assets/js/23.1c74d4aa.js"><link rel="prefetch" href="/assets/js/24.4d0438cf.js"><link rel="prefetch" href="/assets/js/25.b2af806c.js"><link rel="prefetch" href="/assets/js/26.9b456777.js"><link rel="prefetch" href="/assets/js/27.5ca765a6.js"><link rel="prefetch" href="/assets/js/28.bf4ae73c.js"><link rel="prefetch" href="/assets/js/29.2f132c3e.js"><link rel="prefetch" href="/assets/js/30.4993487e.js"><link rel="prefetch" href="/assets/js/31.f3f9e459.js"><link rel="prefetch" href="/assets/js/32.69dd4609.js"><link rel="prefetch" href="/assets/js/33.1777a001.js"><link rel="prefetch" href="/assets/js/34.8a6a7a7e.js"><link rel="prefetch" href="/assets/js/35.279a9c9d.js"><link rel="prefetch" href="/assets/js/36.9beda313.js"><link rel="prefetch" href="/assets/js/37.272791a0.js"><link rel="prefetch" href="/assets/js/38.a52bbb5f.js"><link rel="prefetch" href="/assets/js/39.fdd558c7.js"><link rel="prefetch" href="/assets/js/4.39d65b32.js"><link rel="prefetch" href="/assets/js/40.60c1aaeb.js"><link rel="prefetch" href="/assets/js/41.a9683155.js"><link rel="prefetch" href="/assets/js/42.6859a83c.js"><link rel="prefetch" href="/assets/js/43.d5289ab6.js"><link rel="prefetch" href="/assets/js/44.093b97cb.js"><link rel="prefetch" href="/assets/js/45.f41cad71.js"><link rel="prefetch" href="/assets/js/46.948f2c44.js"><link rel="prefetch" href="/assets/js/47.dcb0a7e7.js"><link rel="prefetch" href="/assets/js/48.2f9cf6a1.js"><link rel="prefetch" href="/assets/js/49.6ce5d769.js"><link rel="prefetch" href="/assets/js/5.95cdea45.js"><link rel="prefetch" href="/assets/js/50.5f16011f.js"><link rel="prefetch" href="/assets/js/51.3c59c8b1.js"><link rel="prefetch" href="/assets/js/52.08ee77d4.js"><link rel="prefetch" href="/assets/js/53.ba78b21e.js"><link rel="prefetch" href="/assets/js/54.08f12a37.js"><link rel="prefetch" href="/assets/js/55.1cedce99.js"><link rel="prefetch" href="/assets/js/56.e8114d78.js"><link rel="prefetch" href="/assets/js/57.5c535c6e.js"><link rel="prefetch" href="/assets/js/58.1d80b483.js"><link rel="prefetch" href="/assets/js/59.deb2f01e.js"><link rel="prefetch" href="/assets/js/6.00aabcc1.js"><link rel="prefetch" href="/assets/js/60.bdd9e468.js"><link rel="prefetch" href="/assets/js/61.3179844d.js"><link rel="prefetch" href="/assets/js/62.4cd0ac15.js"><link rel="prefetch" href="/assets/js/63.424179e8.js"><link rel="prefetch" href="/assets/js/64.c5893ea5.js"><link rel="prefetch" href="/assets/js/65.5b44cc10.js"><link rel="prefetch" href="/assets/js/66.fc52eca7.js"><link rel="prefetch" href="/assets/js/67.2fe24c30.js"><link rel="prefetch" href="/assets/js/68.3b225ac9.js"><link rel="prefetch" href="/assets/js/69.9fee601a.js"><link rel="prefetch" href="/assets/js/7.de697a5f.js"><link rel="prefetch" href="/assets/js/70.a7c77310.js"><link rel="prefetch" href="/assets/js/71.5bbbcc6c.js"><link rel="prefetch" href="/assets/js/72.069e87c7.js"><link rel="prefetch" href="/assets/js/73.59732fd2.js"><link rel="prefetch" href="/assets/js/74.f88a0f1f.js"><link rel="prefetch" href="/assets/js/75.b9156de8.js"><link rel="prefetch" href="/assets/js/76.21fdad9e.js"><link rel="prefetch" href="/assets/js/77.7dc5c616.js"><link rel="prefetch" href="/assets/js/78.95986951.js"><link rel="prefetch" href="/assets/js/79.2f541fe4.js"><link rel="prefetch" href="/assets/js/8.4e2ec9d0.js"><link rel="prefetch" href="/assets/js/80.4e28a803.js"><link rel="prefetch" href="/assets/js/81.dba9496c.js"><link rel="prefetch" href="/assets/js/82.0c1adfe5.js"><link rel="prefetch" href="/assets/js/83.81b8070c.js"><link rel="prefetch" href="/assets/js/84.ace70f8b.js"><link rel="prefetch" href="/assets/js/85.1b5dc9fb.js"><link rel="prefetch" href="/assets/js/86.03013063.js"><link rel="prefetch" href="/assets/js/87.5bded93f.js"><link rel="prefetch" href="/assets/js/88.e2bbf3bb.js"><link rel="prefetch" href="/assets/js/89.67ff718a.js"><link rel="prefetch" href="/assets/js/9.02c22cc6.js"><link rel="prefetch" href="/assets/js/90.fc4fff38.js"><link rel="prefetch" href="/assets/js/91.cb66e6f0.js"><link rel="prefetch" href="/assets/js/92.85e74e2b.js"><link rel="prefetch" href="/assets/js/93.50eea647.js"><link rel="prefetch" href="/assets/js/94.a5c532d5.js"><link rel="prefetch" href="/assets/js/95.8e1b4db9.js"><link rel="prefetch" href="/assets/js/96.9ffb0181.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.211ca6d9.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-dad8a512><div data-v-dad8a512><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-dad8a512 data-v-dad8a512><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-64685f0e data-v-dad8a512 data-v-dad8a512><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>白开水</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>白开水</span>
+            
+          <!---->
+          2020
+        </a></span></div></div> <div class="hide" data-v-dad8a512><header class="navbar" data-v-dad8a512><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.png" alt="白开水" class="logo"> <span class="site-name">白开水</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont undefined"></i>
+      编程语言
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/language/python/" class="nav-link"><i class="iconfont undefined"></i>
+  Python
+</a></li><li class="dropdown-item"><!----> <a href="/docs/language/golang/" class="nav-link"><i class="iconfont undefined"></i>
+  Golang
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont undefined"></i>
+      前端
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/front-end/vue/" class="nav-link"><i class="iconfont undefined"></i>
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/docs/front-end/react/" class="nav-link"><i class="iconfont undefined"></i>
+  react
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont undefined"></i>
+      后端
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/back-end/django/" class="nav-link"><i class="iconfont undefined"></i>
+  Django
+</a></li><li class="dropdown-item"><!----> <a href="/docs/back-end/fastapi/" class="nav-link"><i class="iconfont undefined"></i>
+  FastAPI
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont undefined"></i>
+      移动端
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/mobile/android/" class="nav-link"><i class="iconfont undefined"></i>
+  Android
+</a></li><li class="dropdown-item"><!----> <a href="/docs/mobile/ios/" class="nav-link"><i class="iconfont undefined"></i>
+  ios
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont undefined"></i>
+      软件测试
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/software-test/Appium/" class="nav-link"><i class="iconfont undefined"></i>
+  Appium
+</a></li><li class="dropdown-item"><!----> <a href="/docs/software-test/uiautomator2/" class="nav-link"><i class="iconfont undefined"></i>
+  uiautomator2
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      Contact
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/xiehengjian" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://blog.csdn.net/qq_19978927" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-csdn"></i>
+  CSDN
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.zhihu.com/people/bai-kai-shui-68-33/posts" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-zhihu"></i>
+  知乎
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.jianshu.com/u/8238d75b6623" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-jianshu"></i>
+  简书
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-dad8a512></div> <aside class="sidebar" data-v-dad8a512><div class="personal-info-wrapper" data-v-ca798c94 data-v-dad8a512><img src="/avatar.png" alt="author-avatar" class="personal-img" data-v-ca798c94> <h3 class="name" data-v-ca798c94>
+    白开水
+  </h3> <div class="num" data-v-ca798c94><div data-v-ca798c94><h3 data-v-ca798c94>13</h3> <h6 data-v-ca798c94>Article</h6></div> <div data-v-ca798c94><h3 data-v-ca798c94>9</h3> <h6 data-v-ca798c94>Tag</h6></div></div> <hr data-v-ca798c94></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont undefined"></i>
+      编程语言
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/language/python/" class="nav-link"><i class="iconfont undefined"></i>
+  Python
+</a></li><li class="dropdown-item"><!----> <a href="/docs/language/golang/" class="nav-link"><i class="iconfont undefined"></i>
+  Golang
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont undefined"></i>
+      前端
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/front-end/vue/" class="nav-link"><i class="iconfont undefined"></i>
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/docs/front-end/react/" class="nav-link"><i class="iconfont undefined"></i>
+  react
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont undefined"></i>
+      后端
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/back-end/django/" class="nav-link"><i class="iconfont undefined"></i>
+  Django
+</a></li><li class="dropdown-item"><!----> <a href="/docs/back-end/fastapi/" class="nav-link"><i class="iconfont undefined"></i>
+  FastAPI
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont undefined"></i>
+      移动端
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/mobile/android/" class="nav-link"><i class="iconfont undefined"></i>
+  Android
+</a></li><li class="dropdown-item"><!----> <a href="/docs/mobile/ios/" class="nav-link"><i class="iconfont undefined"></i>
+  ios
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont undefined"></i>
+      软件测试
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/software-test/Appium/" class="nav-link"><i class="iconfont undefined"></i>
+  Appium
+</a></li><li class="dropdown-item"><!----> <a href="/docs/software-test/uiautomator2/" class="nav-link"><i class="iconfont undefined"></i>
+  uiautomator2
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      Contact
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/xiehengjian" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://blog.csdn.net/qq_19978927" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-csdn"></i>
+  CSDN
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.zhihu.com/people/bai-kai-shui-68-33/posts" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-zhihu"></i>
+  知乎
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.jianshu.com/u/8238d75b6623" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-jianshu"></i>
+  简书
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-64685f0e data-v-dad8a512><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>Docker常用命令</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>白开水</span>
+            
+          <!---->
+          2020
+        </a></span></div></div> <div data-v-dad8a512><main class="page"><div class="page-title" style="display:none;"><h1>Docker常用命令</h1> <div data-v-3b7f5bdf><i class="iconfont reco-account" data-v-3b7f5bdf><span data-v-3b7f5bdf>白开水</span></i> <i class="iconfont reco-date" data-v-3b7f5bdf><span data-v-3b7f5bdf>2020-08-21</span></i> <i class="iconfont reco-eye" data-v-3b7f5bdf><span id="/blogs/Docker/Docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html" data-flag-title="Your Article Title" class="leancloud-visitors" data-v-3b7f5bdf><a class="leancloud-visitors-count" style="font-size:.9rem;font-weight:normal;color:#999;"></a></span></i> <i class="iconfont reco-tag tags" data-v-3b7f5bdf><span class="tag-item" data-v-3b7f5bdf>Docker</span></i></div></div> <div class="theme-reco-content content__default" style="display:none;"><div class="custom-block tip"><p>Docker想关常用命令及参数</p></div> <h2 id="帮助命令"><a href="#帮助命令" class="header-anchor">#</a> 帮助命令</h2> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>$ docker version <span class="token comment">#显示Docker的版本信息</span>
+$ docker info <span class="token comment">#显示Docker的系统信息，包括镜像和容器的数量</span>
+$ docker <span class="token operator">&lt;</span>command<span class="token operator">&gt;</span> --help <span class="token comment">#查看相关命令的帮助说明</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h2 id="镜像命令"><a href="#镜像命令" class="header-anchor">#</a> 镜像命令</h2> <h3 id="查看本地所有镜像"><a href="#查看本地所有镜像" class="header-anchor">#</a> 查看本地所有镜像</h3> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>$ docker images <span class="token punctuation">[</span>OPTIONS<span class="token punctuation">]</span> <span class="token punctuation">[</span>REPOSITORY<span class="token punctuation">[</span>:TAG<span class="token punctuation">]</span><span class="token punctuation">]</span>
+
+<span class="token comment">#输出内容</span>
+REPOSITORY   <span class="token comment">#镜像的仓库源       </span>
+TAG          <span class="token comment">#镜像的标签       </span>
+IMAGE ID     <span class="token comment">#镜像的ID      </span>
+CREATED      <span class="token comment">#镜像的创建时间       </span>
+SIZE         <span class="token comment">#镜像的大小</span>
+
+<span class="token comment">#参数</span>
+-a, --all             <span class="token comment">#显示所有镜像（默认情况下隐藏临时镜像）    </span>
+    --digests             <span class="token comment">#显示镜像的数字摘要值，默认为否</span>
+-f, --filter filter   <span class="token comment">#根据提供的条件过滤输出</span>
+    --format string       <span class="token comment">#使用Go模板漂亮地打印图像</span>
+    --no-trunc            <span class="token comment">#不截断输出</span>
+-q, --quiet           <span class="token comment">#只显示镜像ID</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><h3 id="添加标签"><a href="#添加标签" class="header-anchor">#</a> 添加标签</h3> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>$ docker tag SOURCE_IMAGE<span class="token punctuation">[</span>:TAG<span class="token punctuation">]</span> TARGET_IMAGE<span class="token punctuation">[</span>:TAG<span class="token punctuation">]</span>
+
+<span class="token comment"># 相当于类似链接的作用</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h3 id="查看镜像信息"><a href="#查看镜像信息" class="header-anchor">#</a> 查看镜像信息</h3> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>$ docker inspect <span class="token punctuation">[</span>OPTIONS<span class="token punctuation">]</span> NAME<span class="token operator">|</span>ID <span class="token punctuation">[</span>NAME<span class="token operator">|</span>ID<span class="token punctuation">..</span>.<span class="token punctuation">]</span>
+
+<span class="token comment">#参数</span>
+-f, --format string   <span class="token comment">#指定输入格式</span>
+-s, --size            <span class="token comment">#展示整个文件大小</span>
+    --type string     <span class="token comment">#输出JSON</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h3 id="查看镜像历史"><a href="#查看镜像历史" class="header-anchor">#</a> 查看镜像历史</h3> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>$ docker <span class="token function">history</span> <span class="token punctuation">[</span>OPTIONS<span class="token punctuation">]</span> IMAGE
+
+<span class="token comment"># 参数</span>
+    --format string   Pretty-print images using a Go template
+-H, --human           Print sizes and dates <span class="token keyword">in</span> human readable <span class="token function">format</span> <span class="token punctuation">(</span>default <span class="token boolean">true</span><span class="token punctuation">)</span>
+    --no-trunc        Don't truncate output
+-q, --quiet           Only show numeric IDs
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h3 id="搜索镜像"><a href="#搜索镜像" class="header-anchor">#</a> 搜索镜像</h3> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>$ docker search <span class="token punctuation">[</span>OPTIONS<span class="token punctuation">]</span> <span class="token environment constant">TERM</span>
+
+<span class="token comment"># 输出内容</span>
+NAME             <span class="token comment">#镜像名           </span>
+DESCRIPTION      <span class="token comment">#镜像描述                  </span>
+STARS            <span class="token comment">#start数</span>
+OFFICIAL         <span class="token comment">#是否官方</span>
+AUTOMATED        <span class="token comment">#是否自动</span>
+
+<span class="token comment"># 参数</span>
+-f, --filter filter   <span class="token comment">#根据提供的条件过滤输出</span>
+    --format string       <span class="token comment">#使用Go模板漂亮地打印图像</span>
+    --limit int           <span class="token comment">#最大搜索结果数（默认为25）</span>
+    --no-trunc            <span class="token comment">#不截断输出</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><h3 id="拉取镜像"><a href="#拉取镜像" class="header-anchor">#</a> 拉取镜像</h3> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>$ docker pull <span class="token punctuation">[</span>OPTIONS<span class="token punctuation">]</span> NAME<span class="token punctuation">[</span>:TAG<span class="token operator">|</span>@DIGEST<span class="token punctuation">]</span>
+
+<span class="token comment"># 参数</span>
+-a, --all-tags                <span class="token comment">#是否获取仓库中的所有镜像，默认为否</span>
+    --disable-content-trust   <span class="token comment">#取消镜像的内容校验，默认为真</span>
+    --platform string         <span class="token comment">#如果服务器支持多平台，则设置平台</span>
+-q, --quiet                   <span class="token comment">#抑制详细输出</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h3 id="删除镜像"><a href="#删除镜像" class="header-anchor">#</a> 删除镜像</h3> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>$ docker rmi <span class="token punctuation">[</span>OPTIONS<span class="token punctuation">]</span> IMAGE <span class="token punctuation">[</span>IMAGE<span class="token punctuation">..</span>.<span class="token punctuation">]</span>
+
+<span class="token comment"># 参数</span>
+-f, --force      <span class="token comment">#强制删除镜像</span>
+	--no-prune   <span class="token comment">#不要删除未标记的父项</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h3 id="清理镜像"><a href="#清理镜像" class="header-anchor">#</a> 清理镜像</h3> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>$ docker image prune
+<span class="token comment"># 参数</span>
+-a,-all                  <span class="token comment">#删除所有无用镜像，不只是临时镜像</span>
+-filter filter           <span class="token comment">#只清理符合给定过滤器的镜像</span>
+-f,-force                <span class="token comment">#强制删除镜像</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h3 id="创建镜像"><a href="#创建镜像" class="header-anchor">#</a> 创建镜像</h3> <h4 id="基于已有容器创建"><a href="#基于已有容器创建" class="header-anchor">#</a> 基于已有容器创建</h4> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>$ docker commit <span class="token punctuation">[</span>OPTIONS<span class="token punctuation">]</span> CONTAINER <span class="token punctuation">[</span>REPOSITORY<span class="token punctuation">[</span>:TAG<span class="token punctuation">]</span><span class="token punctuation">]</span>
+<span class="token comment"># 参数</span>
+  -a, --author string    <span class="token comment">#作者信息</span>
+  -c, --change list      <span class="token comment">#提交的时候执行Dockerfile指令</span>
+  -m, --message string   <span class="token comment">#提交消息</span>
+  -p, --pause            <span class="token comment">#提交时暂停容器运行</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h4 id="基于本地模板导入"><a href="#基于本地模板导入" class="header-anchor">#</a> 基于本地模板导入</h4> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>$ docker <span class="token function">import</span> <span class="token punctuation">[</span>OPTIONS<span class="token punctuation">]</span> <span class="token function">file</span><span class="token operator">|</span>URL<span class="token operator">|</span>- <span class="token punctuation">[</span>REPOSITORY<span class="token punctuation">[</span>:TAG<span class="token punctuation">]</span><span class="token punctuation">]</span>
+<span class="token comment">#Options:</span>
+  -c, --change list       Apply Dockerfile instruction to the created image
+  -m, --message string    Set commit message <span class="token keyword">for</span> imported image
+      --platform string   Set platform <span class="token keyword">if</span> server is multi-platform capable
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h4 id="基于dockerfile创建"><a href="#基于dockerfile创建" class="header-anchor">#</a> 基于Dockerfile创建</h4> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>$ docker build <span class="token punctuation">[</span>OPTIONS<span class="token punctuation">]</span> <span class="token environment constant">PATH</span> <span class="token operator">|</span> URL <span class="token operator">|</span> -
+<span class="token comment"># 参数过多</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h3 id="保存镜像"><a href="#保存镜像" class="header-anchor">#</a> 保存镜像</h3> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>$ docker save <span class="token punctuation">[</span>OPTIONS<span class="token punctuation">]</span> IMAGE <span class="token punctuation">[</span>IMAGE<span class="token punctuation">..</span>.<span class="token punctuation">]</span>
+<span class="token comment">#参数</span>
+ -o, --output string   Write to a file, instead of STDOUT
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h3 id="载入镜像"><a href="#载入镜像" class="header-anchor">#</a> 载入镜像</h3> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>$ docker load <span class="token punctuation">[</span>OPTIONS<span class="token punctuation">]</span>
+<span class="token comment">#参数</span>
+  -i, --input string   Read from <span class="token function">tar</span> archive file, instead of STDIN
+  -q, --quiet          Suppress the load output
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="上传镜像"><a href="#上传镜像" class="header-anchor">#</a> 上传镜像</h3> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>$ docker push <span class="token punctuation">[</span>OPTIONS<span class="token punctuation">]</span> NAME<span class="token punctuation">[</span>:TAG<span class="token punctuation">]</span>
+
+<span class="token comment">#参数</span>
+ --disable-content-trust   Skip image signing <span class="token punctuation">(</span>default <span class="token boolean">true</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h2 id="容器命令"><a href="#容器命令" class="header-anchor">#</a> 容器命令</h2> <h3 id="创建容器"><a href="#创建容器" class="header-anchor">#</a> 创建容器</h3> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>$ docker create <span class="token punctuation">[</span>OPTIONS<span class="token punctuation">]</span> IMAGE <span class="token punctuation">[</span>COMMAND<span class="token punctuation">]</span> <span class="token punctuation">[</span>ARG<span class="token punctuation">..</span>.<span class="token punctuation">]</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="创建并启动"><a href="#创建并启动" class="header-anchor">#</a> 创建并启动</h3> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>$ docker run <span class="token punctuation">[</span>OPTIONS<span class="token punctuation">]</span> IMAGE <span class="token punctuation">[</span>COMMAND<span class="token punctuation">]</span> <span class="token punctuation">[</span>ARG<span class="token punctuation">..</span>.<span class="token punctuation">]</span>
+
+<span class="token comment"># 参数</span>
+--name<span class="token operator">=</span>string  <span class="token comment">#指定容器名</span>
+-d             <span class="token comment">#后台方式运行</span>
+-it            <span class="token comment">#使用交互方式运行，进入容器查看内容</span>
+-p             <span class="token comment">#指定容器的端口</span>
+-P             <span class="token comment">#随机指定端口</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h3 id="查看运行的容器"><a href="#查看运行的容器" class="header-anchor">#</a> 查看运行的容器</h3> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>$ docker <span class="token function">ps</span> <span class="token punctuation">[</span>OPTIONS<span class="token punctuation">]</span>
+
+<span class="token comment"># 参数</span>
+  -a, --all             <span class="token comment">#显示所有容器（默认显示仅运行）</span>
+  -f, --filter filter   <span class="token comment">#根据提供的条件过滤输出</span>
+      --format string   <span class="token comment">#使用Go模板的漂亮打印容器</span>
+  -n, --last int        <span class="token comment">#显示n个上次创建的容器（包括所有状态）（默认值-1）</span>
+  -l, --latest          <span class="token comment">#显示最新创建的容器（包括所有状态）</span>
+      --no-trunc        <span class="token comment">#不截断输出</span>
+  -q, --quiet           <span class="token comment">#仅显示数字标识</span>
+  -s, --size            <span class="token comment">#显示总文件大小</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><h3 id="暂停容器"><a href="#暂停容器" class="header-anchor">#</a> 暂停容器</h3> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>$ docker pause
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="恢复容器"><a href="#恢复容器" class="header-anchor">#</a> 恢复容器</h3> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>$ docker unpause
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="退出容器"><a href="#退出容器" class="header-anchor">#</a> 退出容器</h3> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token builtin class-name">exit</span>  <span class="token comment">#退出并停止</span>
+Ctrl + P + Q <span class="token comment">#退出不停止</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h3 id="删除容器"><a href="#删除容器" class="header-anchor">#</a> 删除容器</h3> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>$ docker <span class="token function">rm</span> <span class="token punctuation">[</span>OPTIONS<span class="token punctuation">]</span> CONTAINER <span class="token punctuation">[</span>CONTAINER<span class="token punctuation">..</span>.<span class="token punctuation">]</span>
+
+<span class="token comment"># 参数</span>
+  -f, --force     <span class="token comment">#强制移除正在运行的容器（使用SIGKILL）</span>
+  -l, --link      <span class="token comment">#删除指定的链接</span>
+  -v, --volumes   <span class="token comment">#删除与容器关联的匿名卷</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h3 id="启动容器"><a href="#启动容器" class="header-anchor">#</a> 启动容器</h3> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>$ docker start <span class="token punctuation">[</span>OPTIONS<span class="token punctuation">]</span> CONTAINER <span class="token punctuation">[</span>CONTAINER<span class="token punctuation">..</span>.<span class="token punctuation">]</span>
+
+<span class="token comment"># 参数</span>
+  -a, --attach                  <span class="token comment">#附加STDOUT/STDERR和转发信号</span>
+      --checkpoint string       <span class="token comment">#从此检查点还原</span>
+      --checkpoint-dir string   <span class="token comment">#使用自定义检查点存储目录</span>
+      --detach-keys string      <span class="token comment">#重写用于分离容器的键序列</span>
+  -i, --interactive             <span class="token comment">#附上集装箱标准</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h3 id="重启容器"><a href="#重启容器" class="header-anchor">#</a> 重启容器</h3> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>$ docker restart <span class="token punctuation">[</span>OPTIONS<span class="token punctuation">]</span> CONTAINER <span class="token punctuation">[</span>CONTAINER<span class="token punctuation">..</span>.<span class="token punctuation">]</span>
+
+<span class="token comment"># 参数</span>
+ -t, --time int   <span class="token comment">#在终止容器之前等待停止的秒数（默认值为10）</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="停止容器"><a href="#停止容器" class="header-anchor">#</a> 停止容器</h3> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>$ docker stop <span class="token punctuation">[</span>OPTIONS<span class="token punctuation">]</span> CONTAINER <span class="token punctuation">[</span>CONTAINER<span class="token punctuation">..</span>.<span class="token punctuation">]</span>
+
+<span class="token comment"># 参数</span>
+ -t, --time int   <span class="token comment">#在终止容器之前等待停止的秒数（默认值为10）</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="杀死容器"><a href="#杀死容器" class="header-anchor">#</a> 杀死容器</h3> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>$  docker <span class="token function">kill</span> <span class="token punctuation">[</span>OPTIONS<span class="token punctuation">]</span> CONTAINER <span class="token punctuation">[</span>CONTAINER<span class="token punctuation">..</span>.<span class="token punctuation">]</span>
+
+<span class="token comment"># 参数</span>
+-s, --signal string   <span class="token comment">#发送到容器的信号（默认为“KILL”）</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="进入容器"><a href="#进入容器" class="header-anchor">#</a> 进入容器</h3> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>$ docker <span class="token builtin class-name">exec</span> <span class="token punctuation">[</span>OPTIONS<span class="token punctuation">]</span> CONTAINER COMMAND <span class="token punctuation">[</span>ARG<span class="token punctuation">..</span>.<span class="token punctuation">]</span>
+
+<span class="token comment"># 参数</span>
+  -d, --detach               <span class="token comment">#分离模式：在后台运行命令</span>
+      --detach-keys string   <span class="token comment">#重写用于分离容器的键序列</span>
+  -e, --env list             <span class="token comment">#设置环境变量</span>
+  -i, --interactive          <span class="token comment">#即使未连接STDIN也应保持打开状态</span>
+      --privileged           <span class="token comment">#为命令授予扩展权限</span>
+  -t, --tty                  <span class="token comment">#分配一个伪TTY</span>
+  -u, --user string          <span class="token comment">#用户名或UID（格式：&lt;name | UID&gt;[：&lt;group | gid&gt;]）</span>
+  -w, --workdir string       <span class="token comment">#容器内的工作目录</span>
+  
+  
+ $ docker attach <span class="token punctuation">[</span>OPTIONS<span class="token punctuation">]</span> CONTAINER
+ 
+ <span class="token comment"># 参数</span>
+ --detach-keys string  <span class="token comment">#重写用于分离容器的键序列 </span>
+ --no-stdin             <span class="token comment">#不要连接标准输入</span>
+ --sig-proxy            <span class="token comment">#将所有接收到的信号代理到进程（默认为true）</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><h3 id="文件传输"><a href="#文件传输" class="header-anchor">#</a> 文件传输</h3> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>$ docker <span class="token function">cp</span> <span class="token punctuation">[</span>OPTIONS<span class="token punctuation">]</span> CONTAINER:SRC_PATH DEST_PATH<span class="token operator">|</span>-
+$ docker <span class="token function">cp</span> <span class="token punctuation">[</span>OPTIONS<span class="token punctuation">]</span> SRC_PATH<span class="token operator">|</span>- CONTAINER:DEST_PATH
+
+<span class="token comment"># 参数</span>
+ -a, --archive       <span class="token comment">#存档模式（复制所有uid/gid信息）</span>
+ -L, --follow-link   <span class="token comment">#始终遵循SRC_路径中的符号链接p'y</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h3 id="导出容器"><a href="#导出容器" class="header-anchor">#</a> 导出容器</h3> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>$ docker <span class="token builtin class-name">export</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="导入容器"><a href="#导入容器" class="header-anchor">#</a> 导入容器</h3> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>$ docker <span class="token function">import</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="数据管理"><a href="#数据管理" class="header-anchor">#</a> 数据管理</h2> <h3 id="创建数据卷"><a href="#创建数据卷" class="header-anchor">#</a> 创建数据卷</h3> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>$ docker volume create -d <span class="token builtin class-name">local</span> <span class="token builtin class-name">test</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="绑定数据卷"><a href="#绑定数据卷" class="header-anchor">#</a> 绑定数据卷</h3> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>$ docker run -mount
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="数据卷容器"><a href="#数据卷容器" class="header-anchor">#</a> 数据卷容器</h3></div> <footer class="page-edit" style="display:none;"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">11/22/2020, 11:44:49 AM</span></div></footer> <!----> <!----> <!----></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/assets/js/app.1cf578a9.js" defer></script><script src="/assets/js/3.81915612.js" defer></script><script src="/assets/js/1.d78e6eed.js" defer></script><script src="/assets/js/20.641b26be.js" defer></script>
+  </body>
+</html>
