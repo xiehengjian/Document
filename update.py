@@ -7,5 +7,6 @@ app=Flask(__name__)
 def update():
     r = Repo("/Document/")
     r.remote().pull()
+    return "更新完成"
 if __name__ == "__main__":
     app.run(debug=True,host="0.0.0.0",port=1200)
