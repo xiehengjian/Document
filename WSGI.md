@@ -1,0 +1,1 @@
+> WSGI(Web Server Gateway Interface)，即Web服务器网关接口，主要规定了服务器端和应用程序间的接口
